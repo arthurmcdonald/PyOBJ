@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyobj3"
+version = "0.1.0"
+description = "A Python port of the OBJ3 equational logic programming language"
+requires-python = ">=3.10"
+readme = "README.md"
+license-files = ["NOTICE"]
+
+[project.scripts]
+pyobj3 = "pyobj3.repl:main"
+
+[tool.setuptools]
+packages = ["pyobj3"]
+
+[tool.setuptools.package-data]
+pyobj3 = ["prelude.obj"]
