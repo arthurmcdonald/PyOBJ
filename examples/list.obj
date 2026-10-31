@@ -1,0 +1,31 @@
+obj LIST is
+  pr NAT .
+  sorts List NeList .
+  subsorts Nat < NeList < List .
+  op nil : -> List .
+  op _;_ : List List -> List [assoc id: nil prec 40] .
+  op _;_ : NeList NeList -> NeList [assoc id: nil prec 40] .
+  op length : List -> Nat .
+  op head : NeList -> Nat .
+  op tail : NeList -> List .
+  op rev : List -> List .
+  op sum : List -> Nat .
+  var N : Nat .
+  var L : List .
+  var NL : NeList .
+  eq length(nil) = 0 .
+  eq length(N ; L) = s length(L) .
+  eq head(N ; L) = N .
+  eq tail(N ; L) = L .
+  eq rev(nil) = nil .
+  eq rev(N ; L) = rev(L) ; N .
+  eq sum(nil) = 0 .
+  eq sum(N ; L) = N + sum(L) .
+endo
+
+red length(1 ; 2 ; 3) .
+red rev(1 ; 2 ; 3 ; 4) .
+red sum(10 ; 20 ; 30) .
+red head(5 ; 6) .
+red tail(5 ; 6 ; 7) .
+red head(nil) .

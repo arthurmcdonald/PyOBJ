@@ -1,0 +1,10 @@
+obj GCD is
+  pr NAT .
+  op gcd : Nat Nat -> Nat [comm] .
+  vars M N : Nat .
+  eq gcd(0, N) = N .
+  cq gcd(M, N) = gcd(N, M rem N) if N > 0 and M >= N .
+  --- Euclid via conditional equation (comm lets gcd(a,b) match both ways)
+endo
+red gcd(12, 18) .
+red gcd(100, 75) .

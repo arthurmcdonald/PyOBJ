@@ -1,0 +1,11 @@
+obj STACK is
+  sorts Element Stack .
+  var ElementVar : Element .
+  var StackVar1 : Stack .
+  op empty : -> Stack .
+  op top : Stack -> Element .
+  op pop : Stack -> Stack .
+  op push : Element Stack -> Stack .
+  eq top(push(ElementVar, StackVar1)) = ElementVar .
+  eq pop(push(ElementVar, StackVar1)) = StackVar1 .
+endo

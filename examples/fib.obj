@@ -1,0 +1,10 @@
+obj FIB is
+  pr NAT .
+  op fib : Nat -> Nat [memo] .
+  var N : Nat .
+  eq fib(0) = 0 .
+  eq fib(1) = 1 .
+  cq fib(N) = fib(p N) + fib(p p N) if N > 1 .
+endo
+red fib(10) .
+red fib(20) .

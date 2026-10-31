@@ -1,0 +1,10 @@
+obj LESS is
+  sort Nat .
+  vars NatVar1 NatVar2 : Nat .
+  op 0 : -> Nat .
+  op s(_) : Nat -> Nat .
+  op lt(_,_) : Nat Nat -> Bool .
+  eq lt(0, NatVar1) = true .
+  eq lt(s(NatVar1), s(NatVar2)) = lt(NatVar1, NatVar2) .
+endo
+

@@ -1,0 +1,10 @@
+obj EVEN is
+  sort Nat .
+  var NatVar : Nat .
+  op 0 : -> Nat .
+  op s(_) : Nat -> Nat .
+  op even(_) : Nat -> Bool .
+  eq even(0) = true .
+  eq even(s(s(NatVar))) = even(NatVar) .
+endo
+

@@ -1,0 +1,10 @@
+obj SUM is
+    sort Nat .
+    var NatVar : Nat .
+    var NatVar1 : Nat .
+    op 0 : -> Nat .
+    op s(_) : Nat -> Nat .
+    op sum(_, _) : Nat Nat -> Nat .
+    eq sum(0, NatVar) = NatVar .
+    eq sum(s(NatVar1), NatVar) = sum(NatVar1, s(NatVar)) .
+endo

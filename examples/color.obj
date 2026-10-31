@@ -1,0 +1,14 @@
+obj COLOR is
+  sorts Color Prim .
+  subsort Prim < Color .
+  ops red green blue : -> Prim .
+  op mix : Color Color -> Color [comm] .
+  op light : Color -> Color .
+  var C : Color .
+  eq mix(C, C) = C .
+  eq light(light(C)) = light(C) .
+endo
+red mix(red, red) .
+red mix(red, blue) == mix(blue, red) .
+red light(light(light(green))) .
+parse mix(red, green) .
