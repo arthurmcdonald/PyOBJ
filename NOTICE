@@ -1,4 +1,5 @@
-PyOBJ3 is a Python port of OBJ3 and is derived from the OBJ3 Lisp sources.
+PyOBJ is a Python port of OBJ3 and is derived from the OBJ3 Lisp sources.
+PyOBJ written by Arthur McDonald
 The original copyright notice and license conditions are reproduced below
 and continue to apply to this derived work.
 
